@@ -64,7 +64,7 @@
     "@changesets/cli": "^2.30.0",
     "@chat-adapter/state-memory": "^4.44.0",
     "@chat-adapter/tests": "^4.44.0",
-    "@commitlint/cli": "^20.5.0",
+    "@commitlint/cli": "^21.2.4",
     "@commitlint/config-conventional": "^20.5.0",
     "@eslint/js": "^10.0.1",
     "@types/node": "^25.6.0",
