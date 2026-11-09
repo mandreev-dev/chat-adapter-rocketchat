@@ -1,0 +1,40 @@
+version: 2
+updates:
+    - package-ecosystem: npm
+      directory: /
+      schedule:
+          interval: weekly
+          day: monday
+      open-pull-requests-limit: 10
+      groups:
+          dev-dependencies:
+              patterns:
+                  - "@*"
+                  - "eslint*"
+                  - "prettier"
+                  - "typescript*"
+                  - "vitest*"
+                  - "tsup"
+                  - "husky"
+                  - "lint-staged"
+                  - "@commitlint/*"
+                  - "@changesets/*"
+                  - "@types/*"
+              update-types:
+                  - minor
+                  - patch
+      reviewers:
+          - mandreev-dev
+      labels:
+          - dependencies
+
+    - package-ecosystem: github-actions
+      directory: /
+      schedule:
+          interval: weekly
+          day: monday
+      reviewers:
+          - mandreev-dev
+      labels:
+          - dependencies
+          - github-actions

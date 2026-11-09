@@ -1,0 +1,94 @@
+{
+  "name": "chat-adapter-rocketchat",
+  "version": "0.1.0",
+  "description": "Rocket.Chat adapter for Chat SDK",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run --coverage",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "format:check": "prettier --check \"src/**/*.ts\"",
+    "changeset": "changeset",
+    "version": "changeset version",
+    "release": "pnpm build && changeset publish",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  },
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=10"
+  },
+  "keywords": [
+    "chat-sdk",
+    "chat-adapter",
+    "rocketchat",
+    "rocket.chat",
+    "bot",
+    "chatbot",
+    "ai-agent",
+    "ai-sdk",
+    "vercel"
+  ],
+  "author": "mandreev-dev",
+  "license": "MIT",
+  "packageManager": "pnpm@10.10.0",
+  "peerDependencies": {
+    "chat": "^4.44.0"
+  },
+  "dependencies": {
+    "@chat-adapter/shared": "^4.44.0"
+  },
+  "devDependencies": {
+    "@changesets/changelog-github": "^0.6.0",
+    "@changesets/cli": "^2.30.0",
+    "@chat-adapter/state-memory": "^4.44.0",
+    "@chat-adapter/tests": "^4.44.0",
+    "@commitlint/cli": "^20.5.0",
+    "@commitlint/config-conventional": "^20.5.0",
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^25.6.0",
+    "@vitest/coverage-v8": "^5.0.3",
+    "chat": "^4.44.0",
+    "eslint": "^10.2.0",
+    "eslint-config-prettier": "^10.1.8",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
+    "prettier": "^3.8.2",
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.2",
+    "typescript-eslint": "^8.58.2",
+    "vitest": "^5.0.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mandreev-dev/chat-adapter-rocketchat.git"
+  },
+  "homepage": "https://github.com/mandreev-dev/chat-adapter-rocketchat#readme",
+  "bugs": {
+    "url": "https://github.com/mandreev-dev/chat-adapter-rocketchat/issues"
+  }
+}
