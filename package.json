@@ -60,7 +60,7 @@
     "@chat-adapter/shared": "^4.44.0"
   },
   "devDependencies": {
-    "@changesets/changelog-github": "^0.6.0",
+    "@changesets/changelog-github": "^1.0.1",
     "@changesets/cli": "^2.30.0",
     "@chat-adapter/state-memory": "^4.44.0",
     "@chat-adapter/tests": "^4.44.0",
